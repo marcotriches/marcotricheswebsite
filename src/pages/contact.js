@@ -11,7 +11,7 @@ function ContactPage() {
         <form
             name="contact-form"
             method="post"
-            data-netlify-honeypot="bot-field"
+           
             data-netlify="true"
             action="/succes"
             data-netlify-recaptcha="true"
