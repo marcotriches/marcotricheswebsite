@@ -130,7 +130,7 @@ function IndexPage() {
                   <h6>Percorrenza: {edge.node.data.percorrenza}</h6>
                 </div>
                 
-                <button className={`${ new Date(currentDate).getTime() < new Date(excDate).getTime() ? "hover:bg-transparent hover:text-gray-700 "  : "opacity-50 cursor-default" } w-auto text-sm md:text-base ml-auto right-0 h-12 my-auto bg-yellow-400 text-black font-semibold py-2 px-2  sm:px-4 border border-yellow-400 rounded focus:outline-none`}>
+                <button className={`${ new Date(currentDate).getTime() < new Date(excDate).getTime() ? "hover:bg-transparent hover:text-gray-700 "  : "opacity-50 cursor-default" } w-auto text-sm md:text-base ml-auto right-0 h-12 my-auto bg-yellow-600 text-black font-semibold py-2 px-2  sm:px-4 border border-yellow-600 rounded focus:outline-none`}>
                 { new Date(currentDate).getTime() < new Date(excDate).getTime() ?  <a href={`mailto:marcotriches@gmail.com?subject=Prenotazione-escursione ${edge.node.data.titolo.text}  ${edge.node.data.data}`}>
           Prenota</a> : "Prenota" }
                 </button>

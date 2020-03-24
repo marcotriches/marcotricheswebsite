@@ -9,10 +9,11 @@ function ContactPage() {
 
       <section className="mb-8 flex m-auto sm:justify-center w-10/12 lg:w-2/3 md:w-2/3 sm:w-4/5">
         <form  name="contact-form"
-            method="post"
+            method="POST"
             data-netlify="true"
             action="/succes"
             className="w-full">
+
           <div className="flex flex-wrap ">
             <div className="w-3/4 ">
               <h2 className=" mb-2 leading-loose text-5xl font-bold text-gray-700">
@@ -25,7 +26,7 @@ function ContactPage() {
           </div>     
           <label
             className="block mb-2 text-xs font-bold uppercase"
-            htmlFor="first-name"
+           
           >
             Info
           </label>
@@ -40,7 +41,7 @@ function ContactPage() {
 
           <label
             className="block mb-2 text-xs font-bold uppercase"
-            htmlFor="message"
+            
           >
             Messaggio
           </label>
