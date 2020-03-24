@@ -12,6 +12,7 @@ function ContactPage() {
             method="POST"
             data-netlify="true"
             action="/succes"
+            data-netlify-recaptcha="true"
             className="w-full">
 
           <div className="flex flex-wrap ">
