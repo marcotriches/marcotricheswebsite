@@ -1,7 +1,6 @@
 import React from "react";
-import {Link, graphql, useStaticQuery } from "gatsby"
+import {Link, graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
-
 import indexImgbg from "../images/index.jpg";
 import indexImg1 from "../images/index-1.jpg";
 import indexImg2 from "../images/index-2.jpg";
@@ -39,11 +38,12 @@ function IndexPage() {
                         slug {
                           
                             text
-                          
                         }
                         orario {
                           text
                         }
+                        km 
+                        percorrenza 
                         luogo {
                           latitude
                           longitude
@@ -125,9 +125,9 @@ function IndexPage() {
               <div className="flex py-2"  >   
                 <img className="fill-current text-gray-500 w-1/6 h-1/5 hidden sm:inline-block" src={distanza} alt=""/>
                 <div className="sm:m-auto">
-                  <h6>Km: 20</h6>
+                  <h6>Km: {edge.node.data.km}</h6>
                   <hr className="my-2"/>
-                  <h6>Percorrenza: 1,20 h</h6>
+                  <h6>Percorrenza: {edge.node.data.percorrenza}</h6>
                 </div>
                 
                 <button className={`${ new Date(currentDate).getTime() < new Date(excDate).getTime() ? "hover:bg-transparent hover:text-gray-700 "  : "opacity-50 cursor-default" } w-auto text-sm md:text-base ml-auto right-0 h-12 my-auto bg-yellow-400 text-black font-semibold py-2 px-2  sm:px-4 border border-yellow-400 rounded focus:outline-none`}>
@@ -137,11 +137,11 @@ function IndexPage() {
                 
               </div> 
             </div>
-            <div className="px-6 py-4">
+            {/* <div className="px-6 py-4">
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
-            </div>
+            </div> */}
           </div>
           </>
         )
