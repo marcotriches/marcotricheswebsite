@@ -11,7 +11,6 @@ function ContactPage() {
         <form  name="contact-form"
             method="post"
             data-netlify="true"
-            data-netlify-honeypot="bot-field" 
             action="/succes"
             className="w-full">
           <div className="flex flex-wrap ">
@@ -34,7 +33,7 @@ function ContactPage() {
           <input
             className="w-full mb-6 form-input"
             id="first-name"
-            name="nome"
+            name="first-name"
             placeholder="Nome e Cognome"
             type="text"
           />
