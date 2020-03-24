@@ -1,53 +1,35 @@
 import React from "react";
-
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import message from "../images/message.svg";
 
 function ContactPage() {
   return (
+    <>
     <Layout>
-      <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="Contact"
-      />
-      <section>
-        <form className="mx-auto md:w-1/2">
-          <p className="mb-8 leading-loose">
-            Here is an example of a form built using the official Tailwind CSS Custom Forms  plugin.{` `}
-            <a
-              className="font-bold text-gray-700 no-underline"
-              href="https://github.com/tailwindcss/custom-forms"
-            >
-              Read the docs
-            </a>
-            .
-          </p>
 
+      <section className="mb-8 flex m-auto sm:justify-center w-10/12 lg:w-2/3 md:w-2/3 sm:w-4/5">
+        <form className="w-full">
+          <div className="flex flex-wrap ">
+            <div className="w-3/4 ">
+              <h2 className=" mb-2 leading-loose text-5xl font-bold text-gray-700">
+                Contattami!
+              </h2>
+            </div>
+              <div className="w-1/4 ">         
+                <img className="float-right fill-current text-gray-500 w-24" src={message} alt=""/>
+              </div>
+          </div>     
           <label
             className="block mb-2 text-xs font-bold uppercase"
             htmlFor="first-name"
           >
-            First Name
+            Info
           </label>
 
           <input
             className="w-full mb-6 form-input"
             id="first-name"
-            placeholder="Bill"
-            type="text"
-          />
-
-          <label
-            className="block mb-2 text-xs font-bold uppercase"
-            htmlFor="last-name"
-          >
-            Last Name
-          </label>
-
-          <input
-            className="w-full mb-6 form-input"
-            id="last-name"
-            placeholder="Murray"
+            placeholder="Nome e Cognome"
             type="text"
           />
 
@@ -55,22 +37,24 @@ function ContactPage() {
             className="block mb-2 text-xs font-bold uppercase"
             htmlFor="message"
           >
-            Message
+            Messaggio
           </label>
 
           <textarea
             className="w-full mb-6 form-textarea"
             id="message"
-            placeholder="Say something..."
+            placeholder="Srivimi qualcosa..."
             rows="8"
           />
 
-          <button className="px-4 py-2 text-sm font-bold text-white bg-gray-700 border-b-4 border-gray-800 rounded hover:border-gray-700 hover:bg-gray-600">
-            Submit
+    
+          <button className="w-1/4 text-sm md:text-base ml-auto right-0 h-12 my-auto bg-yellow-600 hover:bg-transparent text-black hover:text-gray-700 font-semibold py-2 px-2  sm:px-4 border border-yellow-600 rounded focus:outline-none ">
+             Invia
           </button>
         </form>
       </section>
     </Layout>
+    </>
   );
 }
 

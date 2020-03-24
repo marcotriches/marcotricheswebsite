@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-tailwind",
-  "description": "Gatsby starter styled with Tailwind",
+  "name": "marco-triches",
+  "description": "Marco Triches guida escursionistica",
   "version": "4.0.0",
-  "author": "Taylor Bryant <taylor@bryant.io>",
+  "author": "lcsrbn",
   "dependencies": {
     "gatsby": "2.19.10",
     "gatsby-plugin-manifest": "2.2.40",
@@ -10,16 +10,22 @@
     "gatsby-plugin-postcss": "2.1.19",
     "gatsby-plugin-purgecss": "4.0.1",
     "gatsby-plugin-react-helmet": "3.1.21",
+    "gatsby-source-prismic": "^2.3.0-alpha.3",
+    "gatsby-source-prismic-graphql": "^3.3.1",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
+    "prismic-reactjs": "^1.2.0",
     "prop-types": "15.7.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "react-helmet": "5.2.1"
+    "react-helmet": "5.2.1",
+    "react-moment": "^0.9.7"
   },
   "keywords": [
-    "gatsby",
-    "tailwind",
-    "tailwindcss",
-    "purgecss"
+    "escursioni",
+    "trekking",
+    "percorsi",
+    "montagna"
   ],
   "license": "MIT",
   "scripts": {
@@ -41,8 +47,9 @@
     "autoprefixer": "9.7.4",
     "babel-eslint": "10.0.3",
     "cssnano": "4.1.10",
-    "eslint": "6.8.0",
-    "eslint-loader": "3.0.3",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
     "eslint-plugin-import": "2.20.0",
     "eslint-plugin-react": "7.18.0",
     "gatsby-plugin-eslint": "2.0.8",

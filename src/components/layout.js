@@ -1,40 +1,40 @@
 import PropTypes from "prop-types";
 import React from "react";
-
+import SEO from "../components/seo";
 import Header from "./header";
 
+
 function Layout({ children }) {
+
   return (
+    <>
+    <SEO keywords={[`escursioni`, `sentieri`, `itinerari`, ` trekking`, `montagna`]  } title="Marco Triches, guida ambientale escursionistica"/>
+
     <div className="flex flex-col font-sans min-h-screen text-gray-900">
       <Header />
 
-      <main className="flex flex-col flex-1 md:justify-center max-w-4xl mx-auto px-4 py-8 md:p-8 w-full">
+      <main className="flex flex-col flex-1 pt-16 justify-center ">
         {children}
       </main>
 
-      <footer className="bg-blue-700">
-        <nav className="flex justify-between max-w-4xl mx-auto p-4 md:p-8 text-sm">
+      <footer className="bg-yellow-600">
+        <nav className="flex justify-between w-10/12 lg:w-2/3 md:w-2/3 sm:w-4/5 mx-auto py-4 text-sm">
           <p className="text-white">
-            Created by{` `}
-            <a
-              className="font-bold no-underline text-white"
-              href="https://bryant.io"
-            >
-              Taylor Bryant
-            </a>
+          © {new Date().getFullYear()}, {` `} Marco Triches
           </p>
 
-          <p>
+          <div className=" border rounded-full text-white h-8 w-8 p-auto flex items-center justify-center border-white hover:text-black hover:bg-yellow-400 hover:border-transparent">
             <a
-              className="font-bold no-underline text-white"
-              href="https://github.com/taylorbryant/gatsby-starter-tailwind"
+              className="font-bold text-2xl"
+              href="https://www.facebook.com/marco.triches.376"
             >
-              GitHub
+              f
             </a>
-          </p>
+          </div>
         </nav>
       </footer>
     </div>
+    </>
   );
 }
 

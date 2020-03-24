@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`
+    title: `Marco Triches`,
+    description: `Guida ambientale`,
+    author: `lcsrbn`
   },
   plugins: [
     "gatsby-plugin-eslint",
@@ -36,6 +36,23 @@ module.exports = {
         purgeOnly: [`src/css/style.css`]
       }
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+
+    // require("dotenv").config({
+    //    path: `.env.${process.env.NODE_ENV}`,
+    // }),
+     {
+      resolve: `gatsby-source-prismic`,
+      options: {
+      repositoryName: `marcotriches`,
+      accessToken: process.env.API_KEY,      	
+     // pages: [{ 
+      //type: 'Escursione',          // TypeName from prismic
+     // match: `/escursioni/${slug}`,   // Pages will be generated under this pattern
+      //path: '/escursione',        // Placeholder page for unpublished documents
+      //component: require.resolve('./src/templates/escursioni.js'),
+      //}]
+    },
+   },
   ]
 };

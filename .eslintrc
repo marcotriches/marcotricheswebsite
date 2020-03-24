@@ -1,4 +1,10 @@
 {
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+
   // https://eslint.org/docs/user-guide/configuring#specifying-environments
   "env": {
     "browser": true,
