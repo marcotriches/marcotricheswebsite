@@ -14,7 +14,6 @@ function ContactPage() {
             data-netlify="true"
             data-netlify-honeypot="bot-field" 
             action="/succes"
-            data-netlify-recaptcha="true"
             className="w-full">
 
           <input type="hidden" name="form-name" value="contact-form" />
@@ -53,10 +52,7 @@ function ContactPage() {
             name="message"
             placeholder="Srivimi qualcosa..."
             rows="8"
-          />
-          <div data-netlify-recaptcha="true"></div>
-
-    
+          />    
           <button type="submit" className="w-1/4 text-sm md:text-base ml-auto right-0 h-12 my-auto bg-yellow-600 hover:bg-transparent text-black hover:text-gray-700 font-semibold py-2 px-2  sm:px-4 border border-yellow-600 rounded focus:outline-none ">
              Invia
           </button>
