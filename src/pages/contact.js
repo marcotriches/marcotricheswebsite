@@ -17,7 +17,7 @@ function ContactPage() {
             data-netlify-recaptcha="true"
             className="w-full">
 
-          <input type="hidden" name="form-name" value="contact-form" />
+          {/* <input type="hidden" name="form-name" value="contact-form" /> */}
 
           <div className="flex flex-wrap ">
             <div className="w-3/4 ">
