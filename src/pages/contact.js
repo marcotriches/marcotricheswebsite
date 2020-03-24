@@ -44,6 +44,18 @@ function ContactPage() {
           <label
             className="block mb-2 text-xs font-bold uppercase"
           >
+            Indirizzo Email
+          </label>
+          <input
+            className="w-full mb-6 form-input"
+            name="indirizzo-email"
+            placeholder="Indirizzo Email"
+            type="email"
+          />      
+
+          <label
+            className="block mb-2 text-xs font-bold uppercase"
+          >
             Messaggio
           </label>
 
