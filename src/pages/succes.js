@@ -16,12 +16,6 @@ function Success() {
                 Grazie per avermi contattato, ci sentiamo presto!
             </h2>
         </div>
-        <div className="w-full">
-             <h2 className="text-5xl underline font-bold text-gray-700">
-                 Grazie per avermi contattato, ci sentiamo presto!
-            </h2>
-        </div>
-            
       </section>
     </Layout>
     </>

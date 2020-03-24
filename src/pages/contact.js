@@ -48,7 +48,6 @@ function ContactPage() {
 
           <textarea
             className="w-full mb-6 form-textarea"
-            id="message"
             name="message"
             placeholder="Srivimi qualcosa..."
             rows="8"
