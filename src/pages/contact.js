@@ -8,7 +8,12 @@ function ContactPage() {
     <Layout>
 
       <section className="mb-8 flex m-auto sm:justify-center w-10/12 lg:w-2/3 md:w-2/3 sm:w-4/5">
-        <form className="w-full">
+        <form  name="preventivo-form"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field" 
+            action="/succes"
+            className="w-full">
           <div className="flex flex-wrap ">
             <div className="w-3/4 ">
               <h2 className=" mb-2 leading-loose text-5xl font-bold text-gray-700">
@@ -29,6 +34,7 @@ function ContactPage() {
           <input
             className="w-full mb-6 form-input"
             id="first-name"
+            name="nome"
             placeholder="Nome e Cognome"
             type="text"
           />
@@ -43,12 +49,13 @@ function ContactPage() {
           <textarea
             className="w-full mb-6 form-textarea"
             id="message"
+            name="message"
             placeholder="Srivimi qualcosa..."
             rows="8"
           />
 
     
-          <button className="w-1/4 text-sm md:text-base ml-auto right-0 h-12 my-auto bg-yellow-600 hover:bg-transparent text-black hover:text-gray-700 font-semibold py-2 px-2  sm:px-4 border border-yellow-600 rounded focus:outline-none ">
+          <button type="submit" className="w-1/4 text-sm md:text-base ml-auto right-0 h-12 my-auto bg-yellow-600 hover:bg-transparent text-black hover:text-gray-700 font-semibold py-2 px-2  sm:px-4 border border-yellow-600 rounded focus:outline-none ">
              Invia
           </button>
         </form>
