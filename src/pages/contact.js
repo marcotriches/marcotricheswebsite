@@ -8,12 +8,16 @@ function ContactPage() {
     <Layout>
 
       <section className="mb-8 flex m-auto sm:justify-center w-10/12 lg:w-2/3 md:w-2/3 sm:w-4/5">
-        <form  name="contact-form"
+        <form
+            name="contact-form"
             method="POST"
+            data-netlify-honeypot="bot-field"
             data-netlify="true"
             action="/succes"
             data-netlify-recaptcha="true"
             className="w-full">
+
+        <input type="hidden" name="form-name" value="contact-form" />
 
           <div className="flex flex-wrap ">
             <div className="w-3/4 ">
@@ -22,12 +26,11 @@ function ContactPage() {
               </h2>
             </div>
               <div className="w-1/4 ">         
-                <img className="float-right fill-current text-gray-500 w-24" src={message} alt=""/>
+                <img className="float-right fill-current text-gray-500 w-24" src={message} alt="sending message"/>
               </div>
           </div>     
           <label
             className="block mb-2 text-xs font-bold uppercase"
-           
           >
             Info
           </label>
@@ -41,7 +44,6 @@ function ContactPage() {
 
           <label
             className="block mb-2 text-xs font-bold uppercase"
-            
           >
             Messaggio
           </label>
