@@ -17,28 +17,6 @@ module.exports.createPages = async ({ reporter, graphql, actions }) => {
                     }
                 }
             }
-        }
-    `);
-    if (result.errors) {
-        reporter.panic(result.errors);
-      }
-
-    result.data.allPrismicEscursioni.edges.forEach((edge) => {
-        createPage({
-            component: escursioniTemplate,
-            path: `/escursioni/${edge.node.data.slug.text}`,
-            context: {
-                slug: edge.node.data.slug.text,
-            }
-        })
-    })
-}
-
-module.exports.createPages = async ({ reporter, graphql, actions }) => {
-    const { createPage } = actions  
-    const blogTemplate = path.resolve('./src/templates/blog.js')
-    const result = await graphql(`
-        query {
             allPrismicBlog {
                 edges {
                     node {
@@ -55,7 +33,19 @@ module.exports.createPages = async ({ reporter, graphql, actions }) => {
     `);
     if (result.errors) {
         reporter.panic(result.errors);
-    }
+      }
+
+    result.data.allPrismicEscursioni.edges.forEach((edge) => {
+        createPage({
+            component: escursioniTemplate,
+            path: `/escursioni/${edge.node.data.slug.text}`,
+            context: {
+                slug: edge.node.data.slug.text,
+            }
+        })
+    });
+ 
+    const blogTemplate = path.resolve('./src/templates/blog.js')
 
     result.data.allPrismicBlog.edges.forEach((edge) => {
         createPage({
@@ -67,3 +57,4 @@ module.exports.createPages = async ({ reporter, graphql, actions }) => {
         })
     })
 }
+
