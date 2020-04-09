@@ -85,7 +85,7 @@ function IndexPage() {
 <div className="text-3xl font-bold mt-12 mb-12 w-2/3 mx-auto" >
   Percorsi mediterranei, escursionismo alpino
 </div>
-<div className=" flex w-10/12 lg:w-2/3 md:w-2/3 sm:w-4/5 mx-auto flex-wrap md:justify-center ">
+<div className=" flex w-10/12 md:w-full flex-wrap md:justify-center mx-auto  ">
     { data.allPrismicEscursioni.edges.map((edge) => {
       const todayYear = new Date().getFullYear();
       const todayMonth = new Date().getMonth()+1;
@@ -100,7 +100,7 @@ function IndexPage() {
       
         return (
           <>
-          <div key={edge.node.id} className="max-w-sm rounded overflow-hidden shadow-lg m-auto my-2">
+          <div key={edge.node.id} className="w-full  md:w-1/3 lg:w-1/4 rounded overflow-hidden shadow-lg m-1">
             <img className="w-full h-64 object-cover object-center" src={edge.node.data.immagine.url} alt={edge.node.data.titolo.text}/>
             <div className="px-6 py-4">
             { new Date(currentDate).getTime() < new Date(excDate).getTime() ?

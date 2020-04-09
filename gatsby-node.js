@@ -32,5 +32,38 @@ module.exports.createPages = async ({ reporter, graphql, actions }) => {
             }
         })
     })
-    
+}
+
+module.exports.createPages = async ({ reporter, graphql, actions }) => {
+    const { createPage } = actions  
+    const blogTemplate = path.resolve('./src/templates/blog.js')
+    const result = await graphql(`
+        query {
+            allPrismicBlog {
+                edges {
+                    node {
+                        data{
+                            slug{
+                                text
+                            }
+                        }
+                    
+                    }
+                }
+            }
+        }
+    `);
+    if (result.errors) {
+        reporter.panic(result.errors);
+    }
+
+    result.data.allPrismicBlog.edges.forEach((edge) => {
+        createPage({
+            component: blogTemplate,
+            path: `/blog/${edge.node.data.slug.text}`,
+            context: {
+                slug: edge.node.data.slug.text,
+            }
+        })
+    })
 }
