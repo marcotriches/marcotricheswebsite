@@ -82,10 +82,10 @@ function IndexPage() {
 {/* <img className="absolute inset-x-0 bottom-0 w-full" src={clouds} alt=""/>  */}
 </div>
 
-<div className="text-3xl font-bold mt-12 mb-12 w-2/3 mx-auto" >
+<div className="text-3xl font-bold mt-12 mb-12  w-10/12 mx-auto" >
   Percorsi mediterranei, escursionismo alpino
 </div>
-<div className=" flex w-10/12 md:w-full flex-wrap md:justify-center mx-auto  ">
+<div className=" flex w-10/12 md:max-w-6xl flex-wrap md:justify-center mx-auto ">
     { data.allPrismicEscursioni.edges.map((edge) => {
       const todayYear = new Date().getFullYear();
       const todayMonth = new Date().getMonth()+1;
@@ -100,8 +100,8 @@ function IndexPage() {
       
         return (
           <>
-          <div key={edge.node.id} className="w-full  md:w-1/3 lg:w-1/4 rounded overflow-hidden shadow-lg m-1">
-            <img className="w-full h-64 object-cover object-center" src={edge.node.data.immagine.url} alt={edge.node.data.titolo.text}/>
+          <div key={edge.node.id} className="w-full md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg my-1">
+            <img className="w-full h-64 object-cover object-center p-4 " src={edge.node.data.immagine.url} alt={edge.node.data.titolo.text}/>
             <div className="px-6 py-4">
             { new Date(currentDate).getTime() < new Date(excDate).getTime() ?
             <div className="font-bold text-xl text-black hover:underline mb-2"><Link to={`/escursioni/${edge.node.data.slug.text}`}>{edge.node.data.titolo.text}</Link></div> :
@@ -151,7 +151,7 @@ function IndexPage() {
     <hr className="mt-12"/>
    
 
-    <div className="flex flex-col flex-1 justify-center max-w-4xl mx-auto px-4 py-8 md:p-8 w-full"> 
+    <div className="flex flex-col flex-1 justify-center max-w-6xl mx-auto px-4 py-8 md:p-8 w-full"> 
       <section className="text-center">
     
         <div className=" text-3xl font-bold mt-6 mb-6" >
