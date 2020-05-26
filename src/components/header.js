@@ -55,6 +55,10 @@ function Header() {
               title: `Blog`
             },
             {
+              route: `/percorsi`,
+              title: `Percorsi`
+            },
+            {
               route: `/about`,
               title: `About`
             },

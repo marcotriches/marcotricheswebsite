@@ -29,6 +29,18 @@ module.exports.createPages = async ({ reporter, graphql, actions }) => {
                     }
                 }
             }
+            allPrismicPercorsi {
+                edges {
+                    node {
+                        data{
+                            slug{
+                                text
+                            }
+                        }
+                    
+                    }
+                }
+            }
         }
     `);
     if (result.errors) {
@@ -51,6 +63,18 @@ module.exports.createPages = async ({ reporter, graphql, actions }) => {
         createPage({
             component: blogTemplate,
             path: `/blog/${edge.node.data.slug.text}`,
+            context: {
+                slug: edge.node.data.slug.text,
+            }
+        })
+    });
+
+    const percorsiTemplate = path.resolve('./src/templates/percorsi.js')
+
+    result.data.allPrismicPercorsi.edges.forEach((edge) => {
+        createPage({
+            component: percorsiTemplate,
+            path: `/percorsi/${edge.node.data.slug.text}`,
             context: {
                 slug: edge.node.data.slug.text,
             }

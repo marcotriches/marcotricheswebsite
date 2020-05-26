@@ -30,6 +30,8 @@ export const query = graphql`
             orario {
                 text
             }
+            km
+            percorrenza
             
 
         }
@@ -60,7 +62,7 @@ const Escursioni = props => {
                             <p>
                             <strong>Ritrovo alle ore:</strong> {data.prismicEscursioni.data.orario.text}
                             </p>
-                            <p>Km: 20 | Percorrenza: 1,20 </p>
+                            <p>Km: {data.prismicEscursioni.data.km} | Percorrenza: {data.prismicEscursioni.data.percorrenza} </p>
                         </div>
                         <div className="w-1/6 my-auto right-0">
                         <button className="float-right h-12 bg-yellow-600 hover:bg-transparent text-sm sm:text-base text-white hover:text-gray-700 font-semibold items-center px-2 sm:py-2 border border-yellow-600 rounded focus:outline-none">

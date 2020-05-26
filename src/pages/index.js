@@ -15,7 +15,6 @@ import indexImg10 from "../images/index-10.jpg";
 import indexImg11 from "../images/index-11.jpg";
 import indexImg12 from "../images/index-12.jpg";
 import distanza from "../images/distance.svg";
-import clouds from "../images/clouds.png";
 import moment from 'moment';
 import 'moment/locale/it';
 
@@ -137,11 +136,6 @@ function IndexPage() {
                 
               </div> 
             </div>
-            {/* <div className="px-6 py-4">
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
-            </div> */}
           </div>
           </>
         )
