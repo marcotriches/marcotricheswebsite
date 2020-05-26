@@ -32,13 +32,10 @@ const Percorsi = props => {
 
         <Layout>
             
-            <div className="w-10/12 mx-auto h-screen">
-                <div>
+            <div className="w-10/12 mx-auto">
                 <h1 className="text-5xl font-bold text-xl leading-tight">{data.prismicPercorsi.data.titolo.text}</h1>
                     <hr/> 
                     <iframe className="w-full h-screen my-8" frameBorder="0"marginHeight="0" marginWidth="0" src={data.prismicPercorsi.data.gpx.text}></iframe>
-                </div>
-
             </div>     
         </Layout>
 
