@@ -23,7 +23,7 @@ function IndexPage() {
   
   const data = useStaticQuery(graphql`
         query {
-           allPrismicEscursioni(sort: { fields: dataString, order: DESC } ){
+           allPrismicEscursioni(sort: { fields: [data___data], order: DESC } ){
             
               edges {
                     node {
@@ -84,7 +84,7 @@ function IndexPage() {
 <div className="text-3xl font-bold mt-12 mb-12  w-10/12 mx-auto" >
   Percorsi mediterranei, escursionismo alpino
 </div>
-<div className=" flex w-10/12 md:max-w-6xl flex-wrap md:justify-center mx-auto ">
+<div className=" flex w-10/12 md:max-w-6xl flex-wrap  mx-auto ">
     { data.allPrismicEscursioni.edges.map((edge) => {
       const todayYear = new Date().getFullYear();
       const todayMonth = new Date().getMonth()+1;
