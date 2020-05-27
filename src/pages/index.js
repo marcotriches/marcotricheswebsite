@@ -124,9 +124,9 @@ function IndexPage() {
               <div className="flex py-2"  >   
                 <img className="fill-current text-gray-500 w-1/6 h-1/5 hidden sm:inline-block" src={distanza} alt=""/>
                 <div className="sm:m-auto">
-                  <h6>Km: {edge.node.data.km}</h6>
+                  <h6>Km: </h6><div className="text-sm text-gray-500">{edge.node.data.km} </div>
                   <hr className="my-2"/>
-                  <h6>Percorrenza: {edge.node.data.percorrenza}</h6>
+                  <h6>Percorrenza:</h6> <div className="text-sm text-gray-500">{edge.node.data.percorrenza}</div>
                 </div>
                 
                 <button className={`${ new Date(currentDate).getTime() < new Date(excDate).getTime() ? "hover:bg-transparent hover:text-gray-700 "  : "opacity-50 cursor-default" } w-auto text-sm md:text-base ml-auto right-0 h-12 my-auto bg-yellow-600 text-black font-semibold py-2 px-2  sm:px-4 border border-yellow-600 rounded focus:outline-none`}>
