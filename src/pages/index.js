@@ -23,7 +23,7 @@ function IndexPage() {
   
   const data = useStaticQuery(graphql`
         query {
-           allPrismicEscursioni(sort: { fields: [data___data], order: DESC } ){
+           allPrismicEscursioni(sort: { fields: [data___data], order: ASC } ){
             
               edges {
                     node {
