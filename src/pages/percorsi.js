@@ -32,10 +32,10 @@ function PercorsiPage() {
    
    <Layout>
      
-     <div className="flex w-10/12 md:max-w-6xl w-full flex-wrap md:justify-center mx-auto mb-8">
+     <div className="flex w-10/12 md:max-w-6xl flex-wrap md:justify-center mx-auto mb-8">
         { data.allPrismicPercorsi.edges.map((edge) => {
         return (
-          <div  className="w-full md:w-1/2 lg:w-1/3 rounded overflow-hidden my-1">
+          <div className="md:w-1/3 mb-4 p-4">
            <Link to={`/percorsi/${ edge.node.data.slug.text}`}> 
             <div className="font-bold text-md leading-tight">{edge.node.data.titolo.text}</div>
            </Link>

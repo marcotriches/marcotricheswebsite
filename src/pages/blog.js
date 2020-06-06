@@ -43,7 +43,7 @@ function BlogPage() {
    
    <Layout>
      
-     <div className="flex w-10/12 md:max-w-6xl w-full flex-wrap md:justify-center mx-auto mb-8">
+     <div className="flex w-10/12 md:max-w-6xl flex-wrap md:justify-center mx-auto mb-8">
      <div className="w-full text-3xl font-extrabold p-4">Blog</div>
         { data.allPrismicBlog.edges.map((edge) => {
         return (
